@@ -2551,17 +2551,9 @@
         }
 
         if (targetSlide < 0) {
-            if (_.slideCount % _.options.slidesToScroll !== 0) {
-                animSlide = _.slideCount - (_.slideCount % _.options.slidesToScroll);
-            } else {
-                animSlide = _.slideCount + targetSlide;
-            }
+            animSlide = _.slideCount + targetSlide;
         } else if (targetSlide >= _.slideCount) {
-            if (_.slideCount % _.options.slidesToScroll !== 0) {
-                animSlide = 0;
-            } else {
-                animSlide = targetSlide - _.slideCount;
-            }
+            animSlide = targetSlide - _.slideCount;
         } else {
             animSlide = targetSlide;
         }
